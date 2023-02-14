@@ -1,0 +1,41 @@
+.sidebar {
+    &__nav {
+        flex: auto;
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 8px;
+            color: white;
+
+            &--active {
+                background-color: lighten(#4e73df, 5%);
+            }
+        }
+
+        .has-submenu {
+            &>.nav-link {
+                position: relative;
+                transition: all ease .5s;
+
+                i {
+                    font-size: 0.625rem;
+                }
+            }
+
+            &>.nav-link--open {
+                & i::before {
+                    transform: rotate(90deg);
+                    transition: all ease .5s;
+                }
+            }
+        }
+
+        .submenu {
+            margin-left: .5rem;
+            list-style-type: none;
+        }
+
+    }
+}

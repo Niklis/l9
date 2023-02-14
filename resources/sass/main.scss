@@ -1,0 +1,29 @@
+@import 'includes/aside';
+@import 'includes/header';
+@import 'includes/footer';
+
+/*
+******** Main **********
+*/
+
+body {
+    min-height: 100%;
+}
+
+.wrapper-vertical {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper-horizontal {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex: auto;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}

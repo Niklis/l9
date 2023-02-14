@@ -1,0 +1,1 @@
+<footer class="footer shadow-lg d-flex justify-content-start p-2">FOOTER</footer>

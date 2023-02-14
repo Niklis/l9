@@ -1,0 +1,181 @@
+/*
+******** Sidebar **********
+*/
+.sidebar__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+.sidebar__nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4px 8px;
+  color: white;
+}
+.sidebar__nav .nav-link--active {
+  background-color: #6484e3;
+}
+.sidebar__nav .has-submenu > .nav-link {
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.sidebar__nav .has-submenu > .nav-link i {
+  font-size: 0.625rem;
+}
+.sidebar__nav .has-submenu > .nav-link--open i::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.sidebar__nav .submenu {
+  margin-left: 0.5rem;
+  list-style-type: none;
+}
+
+body.sidebar--open .sidebar {
+  margin-left: 0;
+}
+body.sidebar--hidden .sidebar {
+  margin-left: -230px;
+}
+body.sidebar--hidden_open .sidebar {
+  margin-left: 0px;
+}
+body.sidebar--close .sidebar {
+  margin-left: -240px;
+}
+
+.sidebar {
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 1px solid black;
+  background-color: #4e73df;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #4e73df), to(#224abe));
+  background-image: -o-linear-gradient(top, #4e73df 10%, #224abe 100%);
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+  -webkit-transition: margin-left ease 0.5s;
+  -o-transition: margin-left ease 0.5s;
+  transition: margin-left ease 0.5s;
+}
+.sidebar__header {
+  border-bottom: 1px solid black;
+}
+.sidebar__footer {
+  border-top: 1px solid black;
+}
+
+.topbar {
+  /* ============ desktop view ============ */
+  /* ============ small devices ============ */
+}
+.topbar .dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media all and (min-width: 992px) {
+  .topbar .dropdown-menu li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topbar .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+  .topbar .nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+  }
+  .topbar .dropdown-menu > li:hover > .submenu {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .topbar .dropdown-menu .dropdown-menu {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
+******** Main **********
+*/
+body {
+  min-height: 100%;
+}
+
+.wrapper-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.wrapper-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  background-image: -o-linear-gradient(left, #fa709a 0%, #fee140 100%);
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
