@@ -6,8 +6,8 @@
          </a>
      </div>
 
+     <!-- Main menu -->
      <nav class="sidebar__nav">
-         <!-- Aside menu -->
          @if (count($mainMenu) > 0)
              <ul class="nav list-group">
                  @foreach ($mainMenu as $item)

@@ -15,7 +15,6 @@
                         @endif
 
                         {{ __('You are logged in!') }}
-                        @dump($mainMenu)
                     </div>
                 </div>
             </div>

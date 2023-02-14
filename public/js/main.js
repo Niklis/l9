@@ -10,9 +10,9 @@
 var nklsApp = function () {
     var appState_defaults = {
         mobileModeWidth: 992,
-        showTopMenu: true,
-        showSidebar: true,
-        showUserMenu: true,
+        topMenu: true,
+        sidebarState: 'sidebar--open',
+        userMenu: true,
     };
 
     var appState = { ...appState_defaults, ...(getLocalStorageAppState() || {}) };
@@ -50,7 +50,8 @@ var nklsApp = function () {
         // __logs && console.log('Get app-state: ', state);
         return state;
     }
-
+    
+    console.log(getLocalStorageAppState().sidebarState);
     // return {
     //     init:init,
     //     resetApp:resetApp,
@@ -67,10 +68,10 @@ var nklsApp = function () {
     }, true);
 
     window.addEventListener('DOMContentLoaded', event => {
-        Toastify({
-            text: "Welcome!",
-            duration: 3000
-        }).showToast();
+        // Toastify({
+        //     text: "Welcome!",
+        //     duration: 3000
+        // }).showToast();
 
         // CurrentState:NextState
         const sidebarTransitions = {
@@ -108,8 +109,8 @@ var nklsApp = function () {
             root.classList.toggle('sidebar--hidden_open');
         };
 
-        //Sidebar menu
-        document.querySelectorAll('.sidebar__nav .nav-link').forEach(function (element) {
+        //Sidebar menu, Mobile menu
+        document.querySelectorAll('.sidebar__nav .nav-link, #mobile-menu .nav-link').forEach(function (element) {
             element.addEventListener('click', function (e) {
                 let nextEl = element.nextElementSibling;
                 let parentEl = element.parentElement;

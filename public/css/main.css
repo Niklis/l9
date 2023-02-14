@@ -25,7 +25,6 @@
 .sidebar__nav .has-submenu > .nav-link {
   position: relative;
   -webkit-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 .sidebar__nav .has-submenu > .nav-link i {
@@ -33,10 +32,8 @@
 }
 .sidebar__nav .has-submenu > .nav-link--open i::before {
   -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 .sidebar__nav .submenu {
@@ -69,11 +66,9 @@ body.sidebar--close .sidebar {
   border-right: 1px solid black;
   background-color: #4e73df;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #4e73df), to(#224abe));
-  background-image: -o-linear-gradient(top, #4e73df 10%, #224abe 100%);
   background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
   background-size: cover;
   -webkit-transition: margin-left ease 0.5s;
-  -o-transition: margin-left ease 0.5s;
   transition: margin-left ease 0.5s;
 }
 .sidebar__header {
@@ -81,6 +76,47 @@ body.sidebar--close .sidebar {
 }
 .sidebar__footer {
   border-top: 1px solid black;
+}
+
+#mobile-menu {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  background-color: #4e73df;
+}
+#mobile-menu .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4px 8px;
+  color: white;
+}
+#mobile-menu .nav-link--active {
+  background-color: #6484e3;
+}
+#mobile-menu .has-submenu > .nav-link {
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#mobile-menu .has-submenu > .nav-link i {
+  font-size: 0.625rem;
+}
+#mobile-menu .has-submenu > .nav-link--open i::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#mobile-menu .submenu {
+  margin-left: 0.5rem;
+  list-style-type: none;
 }
 
 .topbar {
@@ -176,6 +212,5 @@ body {
       -ms-flex: auto;
           flex: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
-  background-image: -o-linear-gradient(left, #fa709a 0%, #fee140 100%);
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
